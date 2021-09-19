@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+/*Start Header*/
+    header{
+        height: 100vh;
+        background-image:linear-gradient(
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+        ), url("../assets/img/etc/cover.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        position: relative;
+    }
+
+/*Start Navbar*/
+.navbar{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+    padding: 20px 30px;
+}
+
+.navmenus{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7));
+    padding: 5px 30px;
+}
+
+.menuitems{
+    color: #eee;
+    font-size: 13px;
+    letter-spacing:2px;
+
+    transition: all 0.5s;
+}
+
+.menuitems:hover{
+    color: cadetblue;
+}
+
+.lines1,.lines2,.lines3{
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+
+    transition: all 0.4s;
+}
+
+.changes .lines1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.changes .lines2{
+    opacity: 0;
+}
+
+.changes .lines3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+/*End Navbar*/
+
+/*Start Banner*/
+.banners{
+    width: 80%;
+
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.bannerheaders{
+    animation-name: bnani;
+    animation-duration: 2s;
+}
+
+.bannerparagraphs{
+    animation-name: bnani;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes bnani {
+    0%{
+        transform: translate(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+/*End Navbar*/
+
+/*End Header*/
+
+/*Start Mission Section*/
+.missions{
+    background: #031c2b;
+}
+
+.underlines{
+    width: 150px;
+    border: 3px solid #eee;
+    margin: auto;
+}
+
+.cameraimgs.fromlefts{
+    animation-name: myanifromleft;
+    animation-duration: 3s;
+}
+
+.missiontexts.fromrights{
+    animation-name: myanifromright;
+    animation-duration: 3s;
+}
+
+@keyframes myanifromleft{
+    0%{
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes myanifromright{
+    0%{
+        transform: translate(30px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+/*End Mission Section*/
+
+/* Start Collection Section */
+.card{
+    position: relative;
+}
+
+.cardshadows{
+    box-shadow: 5px 8px 20px #444;
+}
+
+.headings{
+    width: 70%;
+    background: #222;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    position: absolute;
+    top:70%;
+    right: 0;
+
+    opacity: 0.7;
+
+    transition: all 0.5s;
+}
+
+.headings:hover{
+    opacity: 1;
+}
+
+/* End Collection Section */
+
+/* Start Gallery Section */
+.darkunderlines{
+    width: 150px;
+    border: 3px solid #aaa;
+    margin: auto;
+}
+
+.gallerylists{
+    color: #777;
+    cursor: pointer;
+}
+
+.gallerylists.activeitems{
+    color: #06b7bd;
+}
+/* End Gallery Section */
+
+/* Start Customer Section */
+.customers{
+    background: #17111f;
+}
+/* End Customer section */
+
+/* Start Pricing section */
+.cardones,.cardtwos,.cardthrees{
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url('../assets/img/etc/camerabg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 7px 18px 50px #555;
+}
+
+.carditems{
+    width: 55%;
+    border-bottom: 1px solid #eee;
+    margin: auto;
+}
+
+.cardbuttons{
+    width: 130px;
+    background-color: #de4121;
+    border-radius: 25px;
+    box-shadow: 5px 8px 20px #000;
+}
+
+.cardbuttons:hover{
+    background-color: #eb5a3d;
+    transform: translateY(-2px);
+}
+
+.cardones.movefromlefts{
+    animation-name: movefromlefts;
+    animation-duration: 2s;
+}
+
+.cardtwos.movefrombottoms{
+    animation-name: movefrombuttoms;
+    animation-duration: 2s;
+}
+
+.cardthrees.movefromrights{
+    animation-name: movefromrights;
+    animation-duration: 2s;
+}
+
+@keyframes movefromlefts{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes movefrombuttoms{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes movefromrights{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* End Pricing section */
+
+
+/* Start Contact Section */
+
+.contacts{
+    background-image: linear-gradient(
+        105deg,
+        /* red 20%,
+        yellow 0% 50%, */
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.9) 50%,
+        transparent 50%
+    ),
+    url('../assets/img/etc/lady.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inputs{
+    color: #fff;
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid #ccc;
+
+    /* bez of form-control rounded= bootstrap-style */
+    border-radius: 0;
+}
+
+.inputs:focus{
+    color: #fff;
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid #de4121;
+
+    /* bez of form-control blue shadow pyar laelae kyi win nae lo cursor cha yin= bootstrap-style */
+    box-shadow: none;
+}
+
+.submitbuttons{
+    background: #de4121;
+
+    transition: all 0.3s ease;
+}
+
+.submitbuttons:hover{
+    background: #eb5a3d;
+    transform: translateY(-3px);
+}
+
+.labels{
+    display: block;
+    color: #999;
+    font-size: 15px;
+    margin-left: 4px;
+    margin-top: -65px;
+
+    transition: all 0.3s;
+}
+
+.inputs:placeholder-shown + .labels{
+    visibility: hidden;
+    transform: translate(20px,20px);
+}
+
+/* End Contact Section */
+
+/* Start Footer Section */
+
+.footerlinks{
+    text-decoration: none;
+    color: #eee;
+    font-size: 13px;
+
+    transition: all 0.3s;
+}
+
+.footerlinks:hover{
+    color: #15a0eb;
+}
+
+/* End Footer Section */
